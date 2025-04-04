@@ -40,6 +40,3 @@ A simple and clean blog website built using Flask and Bootstrap.
 
 Feel free to fork this repository and submit pull requests to improve the project.
 
-## License
-
-This project is licensed under the MIT License. See the `LICENSE` file for details.
