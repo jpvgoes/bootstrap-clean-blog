@@ -1,13 +1,13 @@
 from flask import Flask,render_template,url_for
 import requests
 
-posts = requests.get("https://gist.githubusercontent.com/gellowg/389b1e4d6ff8effac71badff67e4d388/raw/fc31e41f8e1a6b713eafb9859f3f7e335939d518/data.json").json()
+posts_response = requests.get("https://gist.githubusercontent.com/gellowg/389b1e4d6ff8effac71badff67e4d388/raw/fc31e41f8e1a6b713eafb9859f3f7e335939d518/data.json").json()
 
 app = Flask(__name__)
 
 @app.route("/")
 def home():
-    return render_template("index.html",all_posts=posts)
+    return render_template("index.html",all_posts=posts_response)
 
 @app.route('/about')
 def about():
@@ -20,7 +20,7 @@ def contact():
 @app.route('/post/<int:post_id>')
 def show_post(post_id):
     post = None
-    for p in posts:
+    for p in posts_response:
         if p['id'] == post_id:
             post = p
             break
