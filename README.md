@@ -2,6 +2,8 @@
 
 A simple and clean blog website built using Flask and Bootstrap.
 
+![Image](https://github.com/user-attachments/assets/27dd4299-c1f2-42e1-9f03-b5c2b0ba7206)
+
 ## Features
 
 - Responsive design using Bootstrap.
